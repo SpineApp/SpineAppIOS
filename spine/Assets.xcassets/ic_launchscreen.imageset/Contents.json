@@ -1,17 +1,15 @@
 {
   "images" : [
     {
-      "filename" : "spine_logo_new_white_1024_4x.png",
       "idiom" : "universal",
       "scale" : "1x"
     },
     {
-      "filename" : "spine_logo_new_white_1024_4x@2x.png",
+      "filename" : "Logo.jpg",
       "idiom" : "universal",
       "scale" : "2x"
     },
     {
-      "filename" : "spine_logo_new_white_1024_4x@3x.png",
       "idiom" : "universal",
       "scale" : "3x"
     }

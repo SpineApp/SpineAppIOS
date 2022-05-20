@@ -47,7 +47,7 @@ struct OTPVC: View {
             VStack() {
                 VStack {
                     Text(K.appText.otpSent)
-                        .font(.custom(FontStyle.Montserrat_Medium.rawValue, size: 14))
+                        .font(AppUtility.shared.appFont(type: .regular, size: 14))
                         .multilineTextAlignment(.center)
                         .foregroundColor(Color.init(white: 0.93))
                         .padding()
@@ -71,7 +71,7 @@ struct OTPVC: View {
                     
                     Text(K.appText.haveReceive)
                         .padding(.top, 40)
-                        .font(.custom(FontStyle.Montserrat_Medium.rawValue, size: 12))
+                        .font(AppUtility.shared.appFont(type: .SemiBold, size: 12))
                         .foregroundColor(Color.init(white: 0.93))
                     
                     //                    NavigationLink(destination: ChangePasswordVC(strTitle: K.appHeaderTitle.resetPassword, isFromLogin: true, mobileNo: mobileNo), tag: 1, selection: self.$selection) {
@@ -86,7 +86,7 @@ struct OTPVC: View {
                             self.sendOTPAgainonEmail(mobileNo)
                         } label: {
                             Text(K.appButtonTitle.getCodeagain)
-                                .font(.custom(FontStyle.Montserrat_Regular.rawValue, size: 16))
+                                .font(AppUtility.shared.appFont(type: .regular, size: 16))
                                 .underline()
                                 .foregroundColor(Color.init(white: 0.93))
                         }
@@ -96,7 +96,7 @@ struct OTPVC: View {
                             self.sendOTPSMSAgain(mobileNo)
                         } label: {
                             Text(K.appButtonTitle.getCodeaSMS)
-                                .font(.custom(FontStyle.Montserrat_Regular.rawValue, size: 16))
+                                .font(AppUtility.shared.appFont(type: .regular, size: 16))
                                 .underline()
                             
                                 .foregroundColor(Color.init(white: 0.93))
@@ -208,7 +208,8 @@ struct OTPWithKAPin: UIViewRepresentable {
         pinView.borderLineThickness = 1
         pinView.activeBorderLineThickness = 2
         
-        pinView.font = UIFont(fontStyle: FontStyle.Montserrat_Regular, size: 20) ?? UIFont.systemFont(ofSize: 20)
+       // pinView.font = UIFont(fontStyle: AppUtility.shared.appFont(type: .regular, size: 20)) ?? UIFont.systemFont(ofSize: 20)
+       
         pinView.keyboardType = .phonePad
         pinView.keyboardAppearance = .default
         //        pinView.placeholder = "******"

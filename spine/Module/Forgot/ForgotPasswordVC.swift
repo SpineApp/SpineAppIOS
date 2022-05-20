@@ -39,7 +39,7 @@ struct ForgotPasswordVC: View {
     var body: some View {
         ZStack(alignment: .center) {
             VStack {
-                HeaderTitleView(title: K.appHeaderTitle.forgotPassword).padding(.top, 100)
+                HeaderTitleView(title: K.appHeaderTitle.forgotPassword).padding(.top, 100).font(AppUtility.shared.appFont(type: .regular, size: 18))
                 VStack {
                     VStack {
                         TextField("Email", text: $emailId)
@@ -50,6 +50,7 @@ struct ForgotPasswordVC: View {
                             .background(Color.clear)
                             .cornerRadius(25)
                             .autocapitalization(.none)
+                            .font(AppUtility.shared.appFont(type: .regular, size: 16))
                             .overlay(RoundedRectangle(cornerRadius: 25).stroke(Color.white, lineWidth: 2))
                             .padding(.bottom, 20)
                             .keyboardType(.emailAddress)

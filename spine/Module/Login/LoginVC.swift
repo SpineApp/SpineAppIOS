@@ -9,7 +9,7 @@ import FBSDKLoginKit
 
 struct LoginVC: View {
     @Environment(\.presentationMode) var presentationMode: Binding<PresentationMode>
-    
+  
     @State private var emailId   : String = ""
     @State private var mobile   : String = ""
     @State private var password : String = ""
@@ -31,7 +31,11 @@ struct LoginVC: View {
     
     var loginManager = FBSDKLoginManager()
     let readPermissions =  ["public_profile", "email", "user_friends","user_birthday"]
-   
+    init(isRootView: Bool = false) {
+            self.isRootView = isRootView
+        }
+        
+    var isRootView : Bool = false
     var btnBack: some View { Button(action: {
         self.presentationMode.wrappedValue.dismiss()
     }) {
@@ -43,10 +47,10 @@ struct LoginVC: View {
     }
     }
     var body: some View {
-        //        NavigationView {
-        ZStack(alignment: .center) {
+        NavigationView {
+                ZStack(alignment: .center) {
             VStack {
-                HeaderTitleView(title: K.appHeaderTitle.login).padding(.top, 30)
+                HeaderTitleView(title: K.appHeaderTitle.login).padding(.top, 30)  .font(AppUtility.shared.appFont(type: .regular, size: 18))
                 VStack {
                     VStack {
                         TextField("Email", text: $emailId)
@@ -60,6 +64,7 @@ struct LoginVC: View {
                             .overlay(RoundedRectangle(cornerRadius: 25).stroke(Color.white, lineWidth: 2))
                             .padding(.bottom, 20)
                             .keyboardType(.emailAddress)
+                            .font(AppUtility.shared.appFont(type: .regular, size: 16))
                             .onChange(of: emailId) { newValue in
                                 print(newValue)
                             }
@@ -71,6 +76,7 @@ struct LoginVC: View {
                             .frame(height: 45)
                             .background(Color.clear)
                             .cornerRadius(25)
+                            .font(AppUtility.shared.appFont(type: .regular, size: 16))
                             .overlay(RoundedRectangle(cornerRadius: 25).stroke(Color.white, lineWidth: 2))
                             .padding(.bottom, 20)
                         
@@ -92,16 +98,20 @@ struct LoginVC: View {
                         }
                         NavigationLink(destination: ForgotPasswordVC(), tag: 1, selection: self.$selection) {
                             EmptyView()
+                                
                         }
                         VStack {
                             Button {
                                 self.selection = 1
+                                
                             } label: {
-                                Text("Forgot Password").foregroundColor(.white).underline()
+                                Text("Forgot Password").foregroundColor(.white).underline().font(AppUtility.shared.appFont(type: .regular, size: 16))
                             }.padding()
+                            
                         }
                         HStack{
                             LabelledDivider(label: "Or")
+                                .font(AppUtility.shared.appFont(type: .regular, size: 16))
                         }
                         VStack{
                             Button {
@@ -109,6 +119,7 @@ struct LoginVC: View {
                                 self.facebookLogin()
                             } label: {
                                 Text("Contionue with Facebook")
+                                    .font(AppUtility.shared.appFont(type: .regular, size: 16))
                                     .frame(minWidth: 0, maxWidth: .infinity)
                                     .font(.system(size: 16))
                                     .padding()
@@ -143,10 +154,13 @@ struct LoginVC: View {
                 .scaleEffect()
                 .edgesIgnoringSafeArea(.all)
         )
+        
+    }  
         .navigationBarItems(leading: btnBack)
         .navigationBarBackButtonHidden(true)
+        .navigationBarHidden(true)
+        
     }
-    
     private func redirectToMainScreen() {
         DispatchQueue.main.async {
             //            if let window = UIApplication.shared.windows.first {

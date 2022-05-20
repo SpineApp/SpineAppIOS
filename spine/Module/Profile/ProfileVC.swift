@@ -22,14 +22,18 @@ struct ProfileVC: View {
             VStack {
                  VStack {
                     VStack {
-                       
+//                        NavigationLink(destination: LoginVC(), tag: 1, selection: self.$selection) {
+//
+//                        }
                         AppLoginButton(title: K.appButtonTitle.logout, callback: {
-                            signInResponseModel.remove()
-                            AppUtility.shared.redirectToLoginScreen()
-
-                        }
-                        )
-                       
+                            //self.selection = 1
+                           signInResponseModel.remove()
+                          AppUtility.shared.userSettings.islogin = false
+                          
+                           AppUtility.shared.redirectToLoginScreen()
+                           
+                            
+                        })
                     }.padding(.top, 200)
                         .padding([.leading, .trailing], 30)
                 }
@@ -39,7 +43,6 @@ struct ProfileVC: View {
             .onTapGesture {
                 self.hideKeyboard()
             }
-            
         }
         .background(
             Image("ic_background")
@@ -50,13 +53,12 @@ struct ProfileVC: View {
         .navigationBarBackButtonHidden(true)
     }
     
-    
-    
+   
 }
 
 
 struct ProfileVC_Previews: PreviewProvider {
     static var previews: some View {
-        ForgotPasswordVC()
+        ProfileVC()
      }
 }

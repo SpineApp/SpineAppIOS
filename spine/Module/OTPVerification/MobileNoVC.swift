@@ -39,14 +39,14 @@ struct MobileNoVC: View {
             VStack {
                 VStack {
                     Text(K.appText.enterPhone)
-                        .font(.custom(FontStyle.Montserrat_Medium.rawValue, size: 14))
+                        .font(AppUtility.shared.appFont(type: .SemiBold, size: 14))
                         .multilineTextAlignment(.center)
                         .foregroundColor(Color.init(white: 0.93))
                         .padding()
                     
                     HStack {
                         Text("GB +44")
-                            .font(.custom(FontStyle.Montserrat_Medium.rawValue, size: 16))
+                            .font(AppUtility.shared.appFont(type: .SemiBold, size: 16))
                             .multilineTextAlignment(.center)
                             .foregroundColor(Color.init(white: 0.93))
                         Divider().frame(width: 1, height: 30, alignment: .center).background(Color.white)
@@ -56,6 +56,7 @@ struct MobileNoVC: View {
                             .frame(height: 35)
                             .background(Color.clear)
                             .autocapitalization(.none)
+                            .font(AppUtility.shared.appFont(type: .regular, size: 16))
                             .keyboardType(.phonePad)
                             .onChange(of: mobile) { newValue in
                                 print(newValue)

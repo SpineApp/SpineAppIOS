@@ -18,47 +18,26 @@ struct TutorialView: View {
                         ZStack {
                             VStack {
                                 Spacer()
-                                SpineTextView().padding(.bottom, 150)
-                                Text("The Spiritual Network")
+                                SpineTextView().padding(.bottom, 100)
+                                Text("The Spiritual Network").font(AppUtility.shared.appFont(type: .regular, size: 18))
                                     .foregroundColor(.white)
-                                    .padding(.bottom, 150)
-//                                NavigationLink(destination: OTPVC()) {
-//                                    Text("LOGIN")
-//                                        .frame(width: 250, height: 45, alignment: .center)
-//                                        .foregroundColor(K.appColors.appTheme)
-//                                        .background(Color.white)
-//                                        .cornerRadius(
-//                                            30).padding(.bottom, 100)
-//                                        .navigationTitle("")
-//                                        .navigationBarTitleDisplayMode(.inline)
-//                                    
-//                                }
-                                
+                                    .padding(.bottom, 160)
                             }
                         }
+                            .background(Image("ic_spine_logo").padding(.bottom, 80))
                     )}
                     PageView.Page { AnyView(
                         ZStack {
                             VStack(alignment: .center, spacing: 20) {
-                                Text("DEINE DIGITALE HEIMAT")
+                                Text("DEINE DIGITALE HEIMAT").font(AppUtility.shared.appFont(type: .Bold, size: 20))
                                     .foregroundColor(.white).padding()
                                 Text("Hier, sind wir untereinander.\neine Gemeinschaft, die dich dafür liebt,\ndass Du Deine Individualität lebst.\n\neine Gemeinschaft, die verstanden hat, dass Entfaltung nur im Vertrauen geschieht.\n\nEine Gemeinschaft, die einander hilft.")
+                                    .font(AppUtility.shared.appFont(type: .regular, size: 16))
                                     .foregroundColor(.white)
                                     .multilineTextAlignment(.center)
-                                Text("The Spiritual Network").padding()
+                                Text("The Spiritual Network").font(AppUtility.shared.appFont(type: .regular, size: 16)).padding()
                                     .foregroundColor(.white)
-                                Text("Hier sind unsere Regein für ein \nrespektvolles Miteinander").padding()
-                                    .foregroundColor(.white)
-                                    .multilineTextAlignment(.center)
-                            }
-                        }
-                    )}
-                    PageView.Page { AnyView(
-                        ZStack {
-                            VStack(alignment: .center, spacing: 20) {
-                                Text("HASS HAT HAUSARREST")
-                                    .foregroundColor(.white).padding()
-                                Text("Hift uns gemeinsam, eine starke \nGemeinschaftaufzubauen.\n\nSei freundlich, höflich undhilfbereit.\n\nLass uns alle einander mit Respekt behandeln.\n\nRespektlose Kommentare werden sofort\ngelöscht und wir bittendich, jeglichen Verstoß\nsofort zu melden, umandere zu schützen")
+                                Text("Hier sind unsere Regein für ein \nrespektvolles Miteinander").font(AppUtility.shared.appFont(type: .regular, size: 16)).padding()
                                     .foregroundColor(.white)
                                     .multilineTextAlignment(.center)
                             }
@@ -67,9 +46,9 @@ struct TutorialView: View {
                     PageView.Page { AnyView(
                         ZStack {
                             VStack(alignment: .center, spacing: 20) {
-                                Text("HASS HAT HAUSARREST")
+                                Text("HASS HAT HAUSARREST").font(AppUtility.shared.appFont(type: .Bold, size: 20))
                                     .foregroundColor(.white).padding()
-                                Text("Hift uns gemeinsam, eine starke \nGemeinschaftaufzubauen.\n\nSei freundlich, höflich undhilfbereit.\n\nLass uns alle einander mit Respekt behandeln.\n\nRespektlose Kommentare werden sofort\ngelöscht und wir bittendich, jeglichen Verstoß\nsofort zu melden, umandere zu schützen")
+                                Text("Hift uns gemeinsam, eine starke \nGemeinschaftaufzubauen.\n\nSei freundlich, höflich undhilfbereit.\n\nLass uns alle einander mit Respekt behandeln.\n\nRespektlose Kommentare werden sofort\ngelöscht und wir bittendich, jeglichen Verstoß\nsofort zu melden, umandere zu schützen.").font(AppUtility.shared.appFont(type: .regular, size: 16))
                                     .foregroundColor(.white)
                                     .multilineTextAlignment(.center)
                             }
@@ -78,9 +57,20 @@ struct TutorialView: View {
                     PageView.Page { AnyView(
                         ZStack {
                             VStack(alignment: .center, spacing: 20) {
-                                Text("HASS HAT HAUSARREST")
+                                Text("ENTFALTUNG BRAUCHT\n          VERTRAUEN").font(AppUtility.shared.appFont(type: .Bold, size: 20))
                                     .foregroundColor(.white).padding()
-                                Text("Hift uns gemeinsam, eine starke \nGemeinschaftaufzubauen.\n\nSei freundlich, höflich undhilfbereit.\n\nLass uns alle einander mit Respekt behandeln.\n\nRespektlose Kommentare werden sofort\ngelöscht und wir bittendich, jeglichen Verstoß\nsofort zu melden, umandere zu schützen")
+                                Text("Lass Zensur und regionale Beschränkungen\n hinter dir.\n\n Diese Gemeinschaft trät die Verantwortung für sich, nicht wir und wir verkaufen dafür Deine Daten nicht an Dritte.").font(AppUtility.shared.appFont(type: .regular, size: 16))
+                                    .foregroundColor(.white)
+                                    .multilineTextAlignment(.center)
+                            }
+                        }
+                    )}
+                    PageView.Page { AnyView(
+                        ZStack {
+                            VStack(alignment: .center, spacing: 20) {
+                                Text("HIER BIN ICH MENSCH HIRE \n DARF ICH GANZ ICH SEIN").font(AppUtility.shared.appFont(type: .Bold, size: 20))
+                                    .foregroundColor(.white).padding()
+                                Text("Wir definieren uns nicht über Likes anderer, sondern über unser Wirken für die Gemeinschaft.\nDaher findest Du bei uns keine Anzeige deiner Likes. \n\n Anonyme Konten werden sofort gelöscht.").font(AppUtility.shared.appFont(type: .regular, size: 16))
                                     .foregroundColor(.white)
                                     .multilineTextAlignment(.center)
                             }
@@ -93,7 +83,8 @@ struct TutorialView: View {
                                 SpineTextView().padding(.bottom, 40)
                                 
                                 NavigationLink(destination: RegisterVC()) {
-                                    Text("REGISER")
+                                    Text("REGISTER")
+                                        .font(AppUtility.shared.appFont(type: .regular, size: 18))
                                         .frame(width: 250, height: 45, alignment: .center)
                                         .foregroundColor(K.appColors.appTheme)
                                         .background(Color.white)
@@ -105,6 +96,7 @@ struct TutorialView: View {
                                 
                                 NavigationLink(destination: LoginVC()) {
                                     Text("LOGIN")
+                                        .font(AppUtility.shared.appFont(type: .regular, size: 18))
                                         .frame(width: 250, height: 45, alignment: .center)
                                         .foregroundColor(K.appColors.appTheme)
                                         .background(Color.white)
@@ -123,7 +115,7 @@ struct TutorialView: View {
                         .foregroundColor(.white)
                         .modifier(IndicatorModifier(index: index, currentIndex: self.$index))
                     }
-                }.padding(.bottom, 60)
+                }.padding(.bottom, 60).disabled(true)
             }.ignoresSafeArea(.container, edges: [.bottom, .top])
                 .background(
                     Image("ic_launchBG")
@@ -131,12 +123,6 @@ struct TutorialView: View {
                         .scaleEffect()
                         .edgesIgnoringSafeArea(.all)
                 )
-            //            VStack {
-            //                Text("Hello World")
-            //                NavigationLink(destination: LoginVC()) {
-            //                    Text("Do Something")
-            //                }
-            //            }
         }        
     }
     func buttonLoginAction(){
@@ -148,6 +134,7 @@ struct TutorialView: View {
     func buttonRegisterAction(){
         //do write here your button action logic
         print("buttonRegisterAction")
+        AppUtility.shared.redirectToRegisterScreen()
           
     }
 }
@@ -161,11 +148,11 @@ struct TutorialView_Previews: PreviewProvider {
 struct SpineTextView: View {
     var body: some View {
         HStack {
-            Text("S").padding(.trailing, 12).font(.title)
-            Text("P").padding(.trailing, 12).font(.title)
-            Text("I").padding(.trailing, 12).font(.title)
-            Text("N").padding(.trailing, 12).font(.title)
-            Text("E").padding(.trailing, 12).font(.title)
+            Text("S").padding(.trailing, 12).font(AppUtility.shared.appFont(type: .Bold, size: 24))
+            Text("P").padding(.trailing, 12).font(AppUtility.shared.appFont(type: .Bold, size: 24))
+            Text("I").padding(.trailing, 12).font(AppUtility.shared.appFont(type: .Bold, size: 24))
+            Text("N").padding(.trailing, 12).font(AppUtility.shared.appFont(type: .Bold, size: 24))
+            Text("E").padding(.trailing, 12).font(AppUtility.shared.appFont(type: .Bold, size: 24))
         }.foregroundColor(.white)
     }
 }

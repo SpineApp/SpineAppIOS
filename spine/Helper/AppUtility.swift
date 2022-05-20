@@ -79,12 +79,20 @@ extension AppUtility {
     
     func redirectToLoginScreen() {
         if let window = UIApplication.shared.windows.first {
-            AppUtility.shared.userSettings.islogin = false
             let loginView = LoginVC()
             window.rootViewController = UIHostingController(rootView: loginView)
             window.makeKeyAndVisible()
         }
     }
+    
+    func redirectToRegisterScreen() {
+        if let window = UIApplication.shared.windows.first {
+            let loginView = RegisterVC()
+            window.rootViewController = UIHostingController(rootView: loginView)
+            window.makeKeyAndVisible()
+        }
+    }
+    
     
     func redirectToMainScreen() {
         if let window = UIApplication.shared.windows.first {
@@ -92,6 +100,9 @@ extension AppUtility {
             window.rootViewController = UIHostingController(rootView: homeView)
             window.makeKeyAndVisible()
         }
+    }
+    func appFont(type: Font.PoppinsType, size: CGFloat) -> Font {
+        return Font.Poppins(type: type, size: size)
     }
 }
 

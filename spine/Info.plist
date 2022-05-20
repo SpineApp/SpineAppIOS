@@ -9,12 +9,12 @@
 			<string>Editor</string>
 			<key>CFBundleURLSchemes</key>
 			<array>
-				<string>fb501453885054675</string>
+				<string>fb688748822386275</string>
 			</array>
 		</dict>
 	</array>
 	<key>FacebookAppID</key>
-	<string>501453885054675</string>
+	<string>688748822386275</string>
 	<key>FacebookClientToken</key>
 	<string>d8f791e710a7108e22b83e45e2e51905</string>
 	<key>FacebookDisplayName</key>
@@ -48,6 +48,14 @@
 		<string>Poppins-Regular.ttf</string>
 		<string>Poppins-Bold.ttf</string>
 	</array>
+    <key>UIApplicationSupportsIndirectInputEvents</key>
+    <true/>
+    <key>UILaunchStoryboardName</key>
+    <string>LaunchScreen</string>
+    <key>UIRequiredDeviceCapabilities</key>
+    <array>
+        <string>armv7</string>
+    </array>
 	<key>UIApplicationSceneManifest</key>
 	<dict>
 		<key>UIApplicationSupportsMultipleScenes</key>

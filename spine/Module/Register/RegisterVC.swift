@@ -60,6 +60,7 @@ struct RegisterVC: View {
         ZStack(alignment: .center) {
             VStack {
                 HeaderTitleView(title: K.appHeaderTitle.signup).padding(.top, 20)
+                    .font(AppUtility.shared.appFont(type: .regular, size: 18))
                 VStack {
                     VStack {
                         TextField("Username", text: $username)
@@ -70,6 +71,7 @@ struct RegisterVC: View {
                             .background(Color.clear)
                             .cornerRadius(25)
                             .autocapitalization(.none)
+                            .font(AppUtility.shared.appFont(type: .regular, size: 16))
                             .overlay(RoundedRectangle(cornerRadius: 25).stroke(Color.white, lineWidth: 2))
                             .padding(.bottom, 20)
                             .keyboardType(.emailAddress)
@@ -85,6 +87,7 @@ struct RegisterVC: View {
                             .background(Color.clear)
                             .cornerRadius(25)
                             .autocapitalization(.none)
+                            .font(AppUtility.shared.appFont(type: .regular, size: 16))
                             .overlay(RoundedRectangle(cornerRadius: 25).stroke(Color.white, lineWidth: 2))
                             .padding(.bottom, 20)
                             .keyboardType(.emailAddress)
@@ -99,6 +102,7 @@ struct RegisterVC: View {
                             .frame(height: 45)
                             .background(Color.clear)
                             .cornerRadius(25)
+                            .font(AppUtility.shared.appFont(type: .regular, size: 16))
                             .overlay(RoundedRectangle(cornerRadius: 25).stroke(Color.white, lineWidth: 2))
                             .padding(.bottom, 20)
                         
@@ -110,6 +114,7 @@ struct RegisterVC: View {
                             .background(Color.clear)
                             .cornerRadius(25)
                             .autocapitalization(.none)
+                            .font(AppUtility.shared.appFont(type: .regular, size: 16))
                             .overlay(RoundedRectangle(cornerRadius: 25).stroke(Color.white, lineWidth: 2))
                             .padding(.bottom, 20)
                             .keyboardType(.emailAddress)
@@ -137,7 +142,7 @@ struct RegisterVC: View {
                             Button {
                                 print("Forgot Password pressed")
                             } label: {
-                                Text("I have read and agree to the Terms of Service and Privacy Policy").font(.system(size: 12, design: .default)).foregroundColor(.white)
+                                Text("I have read and agree to the Terms of Service and Privacy Policy").font(AppUtility.shared.appFont(type: .regular, size: 12)).foregroundColor(.white)
                             }.padding()
                         }
                         HStack{
@@ -149,8 +154,9 @@ struct RegisterVC: View {
                                 facebookLogin()
                             } label: {
                                 Text("Contionue with Facebook")
+                                    .font(AppUtility.shared.appFont(type: .regular, size: 16))
                                     .frame(minWidth: 0, maxWidth: .infinity)
-                                    .font(.system(size: 16))
+                    
                                     .padding()
                                     .foregroundColor(.white)
                                     .background(
