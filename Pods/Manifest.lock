@@ -15,12 +15,14 @@ PODS:
     - FBSDKCoreKit
   - ObjectMapper (3.5.3)
   - SVPinView (1.0.11)
+  - WaterfallGrid (1.0.1)
 
 DEPENDENCIES:
   - AlamofireObjectMapper
   - FBSDKCoreKit
   - FBSDKLoginKit
   - SVPinView (~> 1.0)
+  - WaterfallGrid
 
 SPEC REPOS:
   trunk:
@@ -31,6 +33,7 @@ SPEC REPOS:
     - FBSDKLoginKit
     - ObjectMapper
     - SVPinView
+    - WaterfallGrid
 
 SPEC CHECKSUMS:
   Alamofire: f9450d3c7f6bea2ad62e7a541c3e9b186c7991d6
@@ -40,7 +43,8 @@ SPEC CHECKSUMS:
   FBSDKLoginKit: 699ff169080e3072de4b9b0faca90bf23dc36deb
   ObjectMapper: 97111c97e054a6ee25917662106689f0b4127b37
   SVPinView: 9b538d0ba68cdb092afe4f0f67ec84cbed079466
+  WaterfallGrid: 0554a759d9a8aa136fc1769480ddb01bc6fb94b9
 
-PODFILE CHECKSUM: c7221d935cf20b91eae77b24d716ae97307cfe2a
+PODFILE CHECKSUM: 33d3bb05b0139221b74dd202d65dee82fa2922ce
 
 COCOAPODS: 1.11.2

@@ -22,13 +22,12 @@ struct TabBarView: View {
 //        .navigationViewStyle(StackNavigationViewStyle())
 //        .navigationBarHidden(true)
 //        .edgesIgnoringSafeArea(.all)
-//        NavigationView {
+      NavigationView {
             TabView(selection: $selection) {
     //            Text("Feed Tab")
     //                .font(.system(size: 30, weight: .bold, design: .rounded))
-//                FeedListVC()
                 FeedVC()
-                    .tabItem {
+                 .tabItem {
                         Image("ic_home").renderingMode(.template)
                         Text("Feed")
                     }
@@ -69,7 +68,7 @@ struct TabBarView: View {
                     .tag(4)
             }
             .accentColor(K.appColors.appTheme)
-//        }
+       }.navigationBarHidden(true)
         
     }
 }
