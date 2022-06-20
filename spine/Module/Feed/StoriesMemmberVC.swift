@@ -29,7 +29,7 @@ struct StoriesMemmberVC: View {
                         
                         Spacer()
                         Text("STORIES OF YOUR FRIENDS")
-                            .font(AppUtility.shared.appFont(type: .regular, size: 20))
+                            .font(AppUtility.shared.appAvenirFont(type: .regular, size: 20))
                             .padding(.leading,20)
                         Spacer()
                         
@@ -61,11 +61,11 @@ struct StoriesMemmberVC: View {
                                         .padding(.leading, 50)
                                     
                                     Text("Sophie")
-                                        .font(AppUtility.shared.appFont(type: .Bold, size: 14))
+                                        .font(AppUtility.shared.appAvenirFont(type: .medium, size: 14))
                                     
                                     Text("Living with mental illness")
                                         .frame(minWidth: 0, maxWidth: .infinity,minHeight: 20,alignment: .center)
-                                        .font(AppUtility.shared.appFont(type: .regular, size: 12))
+                                        .font(AppUtility.shared.appAvenirFont(type: .regular, size: 12))
                                         .multilineTextAlignment(.center)
                                     
                                     

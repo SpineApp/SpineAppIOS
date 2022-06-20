@@ -36,7 +36,7 @@ struct MemberListVC: View {
                 Spacer()
               
                 Text("MEMBERS")
-                    .font(AppUtility.shared.appFont(type: .regular, size: 20))
+                    .font(AppUtility.shared.appAvenirFont(type: .regular, size: 20))
                     .padding(.leading,10)
                 Spacer()
                 
@@ -52,7 +52,7 @@ struct MemberListVC: View {
             Text("Discover moments of People's life and get inspired by them.")
                 .multilineTextAlignment(.center)
                 .foregroundColor(Color.gray)
-                .font(AppUtility.shared.appFont(type: .regular, size: 14))
+                .font(AppUtility.shared.appAvenirFont(type: .regular, size: 14))
             
             NavigationLink(destination: MemberGalleryVC(), isActive: self.$isActive){
             }   .navigationBarBackButtonHidden(true)
@@ -82,12 +82,12 @@ struct MemberListVC: View {
                                         }
                         VStack {
                             Text("Craig Warner")
-                                .font(AppUtility.shared.appFont(type: .regular, size: 14))
+                                .font(AppUtility.shared.appAvenirFont(type: .regular, size: 14))
                                 .padding(.bottom,5)
                             
                             Text("Lorem Ipsum")
                                 .foregroundColor(Color.gray)
-                                .font(AppUtility.shared.appFont(type: .regular, size: 12))
+                                .font(AppUtility.shared.appAvenirFont(type: .regular, size: 12))
                                 .padding(.bottom,5)
                         }
                         .padding()
@@ -95,7 +95,7 @@ struct MemberListVC: View {
                             print("Button tapped!")
                         } label: {
                             Text("+ FOLLOWING").frame(width: 110,height:40)
-                                .font(AppUtility.shared.appFont(type: .regular, size: 14))
+                                .font(AppUtility.shared.appAvenirFont(type: .regular, size: 14))
                                 .background(K.appColors.appTheme)
                                 .foregroundColor(Color.white)
                                 .cornerRadius(20)

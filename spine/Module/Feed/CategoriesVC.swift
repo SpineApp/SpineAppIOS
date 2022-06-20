@@ -23,7 +23,7 @@ struct CategoriesVC: View {
                 Spacer()
                 
                 Text("CATEGORIES")
-                    .font(AppUtility.shared.appFont(type: .regular, size: 20))
+                    .font(AppUtility.shared.appAvenirFont(type: .regular, size: 20))
                 Spacer()
                 
                 Image(systemName: "magnifyingglass")
@@ -50,7 +50,7 @@ struct CategoriesVC: View {
                         }, label: {
                             Text("All")
                                 .frame(width: 120, height: 40, alignment: .center)
-                                .font(AppUtility.shared.appFont(type: .regular, size: 18))
+                                .font(AppUtility.shared.appAvenirFont(type: .regular, size: 18))
                                 .background(self.index == 0 ? K.appColors.appTheme : Color.white)
                                 .foregroundColor(self.index == 0 ? .white : .black)
                                 .cornerRadius(10)
@@ -76,7 +76,7 @@ struct CategoriesVC: View {
                     }, label: {
                         Text("Trending")
                             .frame(width: 140, height: 40, alignment: .center)
-                            .font(AppUtility.shared.appFont(type: .regular, size: 18))
+                            .font(AppUtility.shared.appAvenirFont(type: .regular, size: 18))
                             .background(self.index == 1 ? K.appColors.appTheme : Color.white)
                             .foregroundColor(self.index == 1 ? Color.white : Color.black )
                     })
@@ -119,7 +119,7 @@ struct CategoriesAllView: View {
                         .frame(minWidth: 60, maxWidth: .infinity,minHeight: 15)
                         .background(K.appColors.appTheme)
                         .foregroundColor(Color.white)
-                        .font(AppUtility.shared.appFont(type: .regular, size: 14))
+                        .font(AppUtility.shared.appAvenirFont(type: .regular, size: 14))
                         .cornerRadius(30)
                         .padding(EdgeInsets(top: 5, leading: 0, bottom: 5, trailing: 5))
                         .fixedSize(horizontal: true, vertical: false)
@@ -127,7 +127,7 @@ struct CategoriesAllView: View {
                     Button {
                         print("Button tapped!")
                     } label: {
-                        Text("+ FOLLOW").font(AppUtility.shared.appFont(type: .regular, size: 14))
+                        Text("+ FOLLOW").font(AppUtility.shared.appAvenirFont(type: .regular, size: 14))
                             .foregroundColor(K.appColors.appTheme)
                     }
                  
@@ -150,13 +150,13 @@ struct CategoriesTreadingView: View {
                         .frame(minWidth: 60, maxWidth: .infinity,minHeight: 15)
                         .background(K.appColors.appTheme)
                         .foregroundColor(Color.white)
-                        .font(AppUtility.shared.appFont(type: .regular, size: 14))
+                        .font(AppUtility.shared.appAvenirFont(type: .regular, size: 14))
                         .cornerRadius(30)
                         .padding(EdgeInsets(top: 5, leading: 0, bottom: 5, trailing: 5))
                         .fixedSize(horizontal: true, vertical: false)
                     Spacer()
                     Text("UNFOLLOW")
-                        .font(AppUtility.shared.appFont(type: .regular, size: 14))
+                        .font(AppUtility.shared.appAvenirFont(type: .regular, size: 14))
                         .foregroundColor(K.appColors.appTheme)
                 }
                 .frame(width: UIScreen.main.bounds.width-40)

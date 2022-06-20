@@ -24,9 +24,9 @@ struct FeedListCell: View {
                         .aspectRatio(contentMode: .fill)
                         .frame(width: 60, height: 60)
                         .cornerRadius(60)
-                        .padding(.leading, 20)
-                    CustomDotView(height: 10).padding(.bottom, 45)
-                        .padding(.leading, 60)
+                        .padding(.leading, 10)
+                    CustomDotView(height: 10).padding(.top, 50)
+                        .padding(.leading, 50)
                         
                         .onTapGesture {
                                         DispatchQueue.main.async { // maybe even with some delay
@@ -37,13 +37,13 @@ struct FeedListCell: View {
                     
                 VStack(alignment: .leading) {
                     Text("Promoted by")
-                        .font(AppUtility.shared.appFont(type: .regular, size: 16))
+                        .font(AppUtility.shared.appAvenirFont(type: .book, size: 18))
                         .foregroundColor(Color.black)
                         .multilineTextAlignment(.leading)
                     Text("Oliver Reese")
-                        .font(AppUtility.shared.appFont(type: .regular, size: 14))
+                        .font(AppUtility.shared.appAvenirFont(type: .regular, size: 16))
                         .foregroundColor(Color.gray)
-                }.padding(.leading, 10)
+                }.padding(.leading, 5)
             }
             .padding(.top, 5)
             .frame(minWidth: 0, maxWidth: .infinity, alignment: .leading)
@@ -61,7 +61,7 @@ struct FeedListCell: View {
                         .padding(.trailing,5)
                 }
                 Text("0")
-                    .font(AppUtility.shared.appFont(type: .regular, size: 16))
+                    .font(AppUtility.shared.appAvenirFont(type: .regular, size: 16))
                     .padding(.trailing,2)
                 
                 Button(action: {
@@ -72,7 +72,7 @@ struct FeedListCell: View {
                }
                 
                 Text("0")
-                    .font(AppUtility.shared.appFont(type: .regular, size: 16))
+                    .font(AppUtility.shared.appAvenirFont(type: .regular, size: 16))
                     .padding(.trailing,2)
 
                 Button(action: {
@@ -101,7 +101,7 @@ struct FeedListCell: View {
                 Text("In publishing and graphic design, Lorem ipsum is a placeholder text commonly used to demonstrate the visual form.")
                     .foregroundColor(Color.black)
                     .multilineTextAlignment(.leading)
-                    .font(AppUtility.shared.appFont(type: .regular, size: 16))
+                    .font(AppUtility.shared.appAvenirFont(type: .regular, size: 14))
             }.padding([.leading, .top, .trailing], 10)
                 .padding(.bottom, 5)
             Divider().padding([.leading, .trailing], 10)

@@ -36,15 +36,12 @@ struct StoriesImpluseCell: View {
                     
                 HStack {
                     Text("Spine")
-                        .font(AppUtility.shared.appFont(type: .regular, size: 16))
+                        .font(AppUtility.shared.appAvenirFont(type: .regular, size: 16))
                         .foregroundColor(Color.black)
                         .multilineTextAlignment(.leading)
-//                    Text("Oliver Reese")
-//                        .font(AppUtility.shared.appFont(type: .regular, size: 14))
-//                        .foregroundColor(Color.gray)
                     Spacer()
                     Text("Today")
-                        .font(AppUtility.shared.appFont(type: .regular, size: 14))
+                        .font(AppUtility.shared.appAvenirFont(type: .regular, size: 14))
                         .foregroundColor(Color.gray)
                         .padding(.trailing, 10)
                         
@@ -60,16 +57,16 @@ struct StoriesImpluseCell: View {
                         .frame(height:220)
                     Text("SPINE IMPULSE").padding(.top,-120)
                         .foregroundColor(Color.white)
-                        .font(AppUtility.shared.appFont(type: .Bold, size: 16))
+                        .font(AppUtility.shared.appAvenirFont(type: .book, size: 16))
                     Text("Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod tempor incidi?")
                         .foregroundColor(Color.white)
                         .multilineTextAlignment(.center)
                         .padding(.top,-100)
-                        .font(AppUtility.shared.appFont(type: .regular, size: 16))
+                        .font(AppUtility.shared.appAvenirFont(type: .regular, size: 16))
                     Text("Spine")
                         .foregroundColor(Color.white)
                         .padding(.top,-60)
-                    .font(AppUtility.shared.appFont(type: .regular, size: 16))
+                        .font(AppUtility.shared.appAvenirFont(type: .regular, size: 16))
                 }.clipped()
             }
             HStack {
@@ -80,7 +77,7 @@ struct StoriesImpluseCell: View {
                         .padding(.trailing,5)
                 }
                 Text("0")
-                    .font(AppUtility.shared.appFont(type: .regular, size: 16))
+                    .font(AppUtility.shared.appAvenirFont(type: .regular, size: 16))
                     .padding(.trailing,2)
                 
                 Button(action: {
@@ -91,7 +88,7 @@ struct StoriesImpluseCell: View {
                }
                 
                 Text("0")
-                    .font(AppUtility.shared.appFont(type: .regular, size: 16))
+                    .font(AppUtility.shared.appAvenirFont(type: .regular, size: 16))
                     .padding(.trailing,2)
 
                 Button(action: {
@@ -115,15 +112,7 @@ struct StoriesImpluseCell: View {
                 }
                 
             }.padding(.top, 5)
-//            HStack {
-//                
-//                Text("In publishing and graphic design, Lorem ipsum is a placeholder text commonly used to demonstrate the visual form.")
-//                    .foregroundColor(Color.black)
-//                    .multilineTextAlignment(.leading)
-//                    .font(AppUtility.shared.appFont(type: .regular, size: 16))
-//            }.padding([.leading, .top, .trailing], 10)
-//                .padding(.bottom, 5)
-            Divider().padding([.leading, .trailing], 10)
+        Divider().padding([.leading, .trailing], 10)
         }.background(Color.white).frame(minWidth: 0, maxWidth: .infinity, minHeight: 0, maxHeight: .infinity, alignment: .topLeading)
     }
 }

@@ -53,7 +53,7 @@ struct MemberGalleryVC: View {
                 Spacer()
               
                 Text("MEMBERS")
-                    .font(AppUtility.shared.appFont(type: .regular, size: 20))
+                    .font(AppUtility.shared.appAvenirFont(type: .regular, size: 20))
                     .padding(.leading,10)
                 Spacer()
                 
@@ -69,7 +69,7 @@ struct MemberGalleryVC: View {
             Text("Discover people on Spine you might want to follow.")
                 .multilineTextAlignment(.center)
                 .foregroundColor(Color.gray)
-                .font(AppUtility.shared.appFont(type: .regular, size: 14))
+                .font(AppUtility.shared.appAvenirFont(type: .regular, size: 14))
                 .padding(.all, 10)
             ScrollView {
                 WaterfallGrid((0..<15), id: \.self) { index in

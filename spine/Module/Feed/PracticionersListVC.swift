@@ -32,7 +32,7 @@ struct PracticionersListVC: View {
                 Spacer()
                 
                 Text("YOUR SELECTION Of PRACTICIONERS")
-                    .font(AppUtility.shared.appFont(type: .regular, size: 16))
+                    .font(AppUtility.shared.appAvenirFont(type: .regular, size: 16))
                     .padding(.leading,10)
                 Spacer()
                 
@@ -52,7 +52,7 @@ struct PracticionersListVC: View {
             Text("Discover moments of People's life and get inspired by them.")
                 .multilineTextAlignment(.center)
                 .foregroundColor(Color.gray)
-                .font(AppUtility.shared.appFont(type: .regular, size: 14))
+                .font(AppUtility.shared.appAvenirFont(type: .regular, size: 14))
             
             NavigationLink(destination: MemberGalleryVC(), isActive: self.$isActive){
             }   .navigationBarBackButtonHidden(true)
@@ -75,28 +75,28 @@ struct PracticionersListVC: View {
                                     }
                                 }
                             Text("Peter")
-                                .font(AppUtility.shared.appFont(type: .regular, size: 14))
+                                .font(AppUtility.shared.appAvenirFont(type: .regular, size: 14))
                                 .padding(.bottom,5)
                         }
                         VStack {
                             Text("Naturheilpraxis Peter Feigel")
-                                .font(AppUtility.shared.appFont(type: .Bold, size: 14))
+                                .font(AppUtility.shared.appAvenirFont(type: .book, size: 14))
                                 .frame(maxWidth: .infinity, alignment: .leading)
                                 .foregroundColor(K.appColors.appTheme)
                                
                             Text("Mari Dietrich")
-                                .font(AppUtility.shared.appFont(type: .regular, size: 14))
+                                .font(AppUtility.shared.appAvenirFont(type: .regular, size: 14))
                                 .foregroundColor(Color.black)
                                 .frame(maxWidth: .infinity, alignment: .leading)
                             
                             
                             Text("Lorem Ipsum dolor sit amet det lorem Ipsum dolor ")
-                                .font(AppUtility.shared.appFont(type: .regular, size: 14))
+                                .font(AppUtility.shared.appAvenirFont(type: .regular, size: 14))
                                 .frame(maxWidth: .infinity, alignment: .leading)
                                 .foregroundColor(Color.black)
                             
                             Text("Berlin, Germany")
-                                .font(AppUtility.shared.appFont(type: .regular, size: 12))
+                                .font(AppUtility.shared.appAvenirFont(type: .regular, size: 12))
                                 .foregroundColor(Color.gray)
                                 .frame(maxWidth: .infinity, alignment: .leading)
                         }

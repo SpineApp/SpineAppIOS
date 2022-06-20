@@ -51,6 +51,7 @@ struct HomeHeaderView: View {
                             } label: {
                                 Text("DISCOVER")
                                     .font(.custom(FontStyle.Montserrat_Medium.rawValue, size: 14))
+                                    
                                     .foregroundColor(Color.black)
                                     .padding(.top, 20)
                             }
@@ -145,7 +146,7 @@ struct HomeHeaderView: View {
                                 }
                                 .overlay(
                                     Text(searchCategory[index])
-                                        .font(AppUtility.shared.appFont(type: .regular, size: 12))
+                                        .font(AppUtility.shared.appAvenirFont(type: .regular, size: 12))
                                         .foregroundColor(preselectedIndex == index ? Color.white : Color.black)
                                         
                                 ).opacity(categoryToShow ? 1 : 0)
@@ -218,7 +219,7 @@ struct CustomDivider: View {
 
 struct CustomDotView: View {
     var height: CGFloat = 20
-    var color: Color = Color.orange
+    var color: Color = K.appColors.dotColor
     
     var body: some View {
         Group {
@@ -262,13 +263,13 @@ struct addFeedPopup:View{
                     .shadow(radius: 0.4)
                 
                 Text("ADD")
-                    .font(AppUtility.shared.appFont(type: .Bold, size: 18))
+                    .font(AppUtility.shared.appAvenirFont(type: .book, size: 16))
                 
                 List(0..<1) { item in
                     ForEach(data.indices, id:\.self){x in
                         VStack{
                             CardView(filter: data[x])
-                                .font(AppUtility.shared.appFont(type: .regular, size: 16))
+                                .font(AppUtility.shared.appAvenirFont(type: .regular, size: 16))
                         }
                         
                     }
@@ -289,7 +290,7 @@ struct CardView:View{
     var body: some View{
         HStack{
             Text(filter)
-                .font(AppUtility.shared.appFont(type: .regular, size: 16))
+                .font(AppUtility.shared.appAvenirFont(type: .regular, size: 16))
                 .foregroundColor(Color.black.opacity(0.7))
                 .padding()
             Spacer()
@@ -335,12 +336,12 @@ struct memberListView: View{
                                         }
                         VStack {
                             Text("Craig Warner")
-                                .font(AppUtility.shared.appFont(type: .regular, size: 14))
+                                .font(AppUtility.shared.appAvenirFont(type: .regular, size: 14))
                                 .padding(.bottom,5)
                             
                             Text("Lorem Ipsum")
                                 .foregroundColor(Color.gray)
-                                .font(AppUtility.shared.appFont(type: .regular, size: 12))
+                                .font(AppUtility.shared.appAvenirFont(type: .regular, size: 12))
                                 .padding(.bottom,5)
                         }
                         .padding()
@@ -348,7 +349,7 @@ struct memberListView: View{
                             print("Button tapped!")
                         } label: {
                             Text("+ FOLLOWING").frame(width: 110,height:40)
-                                .font(AppUtility.shared.appFont(type: .regular, size: 14))
+                                .font(AppUtility.shared.appAvenirFont(type: .regular, size: 14))
                                 .background(K.appColors.appTheme)
                                 .foregroundColor(Color.white)
                                 .cornerRadius(20)

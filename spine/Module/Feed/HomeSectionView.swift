@@ -70,10 +70,10 @@ struct HomeSectionView: View {
                         }.frame(width:80, height: 70)
 //                            .background(Color.green)
                         Text("Discover\nstories")
-                            .font(AppUtility.shared.appFont(type: .SemiBold, size: 16))
+                            .font(AppUtility.shared.appAvenirFont(type: .regular, size: 16))
                             .multilineTextAlignment(.center)
                             .foregroundColor(K.appColors.appTheme)
-                    }
+                    }.padding(.top, 0)
                     .frame(width:100)
                 }.padding(.leading, 20)
                 Spacer()
@@ -127,7 +127,7 @@ struct HomeSectionView: View {
                             .padding(.leading, 30)
                         }.frame(width:80, height: 70)
                         Text("Discover\nmembers")
-                            .font(AppUtility.shared.appFont(type: .SemiBold, size: 16))
+                       .font(AppUtility.shared.appAvenirFont(type: .medium, size: 16))
                             .multilineTextAlignment(.center)
                             .foregroundColor(K.appColors.appTheme)
                     }
@@ -184,7 +184,7 @@ struct HomeSectionView: View {
                             .padding(.leading, 30)
                         }.frame(width:80, height: 70)
                         Text("Find help/\npracticioners")
-                            .font(AppUtility.shared.appFont(type: .SemiBold, size: 16))
+                            .font(AppUtility.shared.appAvenirFont(type: .medium, size: 16))
                             .multilineTextAlignment(.center)
                             .foregroundColor(K.appColors.appTheme)
                     }

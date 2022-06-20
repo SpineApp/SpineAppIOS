@@ -47,6 +47,10 @@
 		<string>Poppins-SemiBold.ttf</string>
 		<string>Poppins-Regular.ttf</string>
 		<string>Poppins-Bold.ttf</string>
+		<string>Avenir-Black.ttf</string>
+		<string>Avenir-Regular.ttf</string>
+		<string>Avenir-Book.ttf</string>
+		<string>Avenir-Medium.ttf</string>
 	</array>
 	<key>UIApplicationSceneManifest</key>
 	<dict>

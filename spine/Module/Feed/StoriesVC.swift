@@ -82,7 +82,7 @@ struct StoriesVC: View {
                                .navigationBarHidden(true)
                         Spacer()
                         Text("STORIES")
-                            .font(AppUtility.shared.appFont(type: .regular, size: 20))
+                            .font(AppUtility.shared.appAvenirFont(type: .regular, size: 20))
                             .padding(.leading,10)
                         Spacer()
                         Image(systemName: "magnifyingglass")
@@ -92,7 +92,7 @@ struct StoriesVC: View {
                     .padding(.top,10)
                     Text("Discover moments of People's life and get inspired by them.")
                         .foregroundColor(Color.gray)
-                        .font(AppUtility.shared.appFont(type: .regular, size: 14))
+                        .font(AppUtility.shared.appAvenirFont(type: .regular, size: 16))
                         .padding(.top,10)
                         .multilineTextAlignment(.center)
                     LazyVGrid(columns: gridItemLayout, alignment: .center, spacing: 10) {
@@ -119,11 +119,11 @@ struct StoriesVC: View {
                                         .padding(.leading, 50)
                                     
                                     Text("Sophie")
-                                        .font(AppUtility.shared.appFont(type: .Bold, size: 14))
+                                        .font(AppUtility.shared.appAvenirFont(type: .medium, size: 14))
                                     
                                     Text("Living with mental illness")
                                         .frame(minWidth: 0, maxWidth: .infinity,minHeight: 20,alignment: .center)
-                                        .font(AppUtility.shared.appFont(type: .regular, size: 12))
+                                        .font(AppUtility.shared.appAvenirFont(type: .regular, size: 12))
                                         .multilineTextAlignment(.center)
                                 }
                             }

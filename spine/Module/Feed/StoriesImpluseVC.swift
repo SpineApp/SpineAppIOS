@@ -29,14 +29,14 @@ struct StoriesImpluseVC: View {
                    .navigationBarHidden(true)
             Spacer()
             Text("STORIES IMPULSES")
-                .font(AppUtility.shared.appFont(type: .regular, size: 20))
+                    .font(AppUtility.shared.appAvenirFont(type: .regular, size: 20))
                 .padding(.leading,10)
             Spacer()
                 Button(action: {
                           print("Follow")
                        }) {
                            Text("+ Follow")
-                               .font(AppUtility.shared.appFont(type: .Bold, size: 16))
+                               .font(AppUtility.shared.appAvenirFont(type: .book, size: 16))
                                .foregroundColor(K.appColors.appTheme)
                        }
         }
@@ -44,7 +44,7 @@ struct StoriesImpluseVC: View {
         .padding(.top,10)
         Text("Inspirational thoughts and wisdom to encourage…")
             .foregroundColor(Color.gray)
-            .font(AppUtility.shared.appFont(type: .regular, size: 16))
+            .font(AppUtility.shared.appAvenirFont(type: .regular, size: 16))
             .padding(.all,10)
             .multilineTextAlignment(.center)
             ScrollView {
